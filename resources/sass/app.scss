@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+
+/**************************************/
+/**************** Root ****************/
+/**************************************/
+:root {
+    --background: #24253c; //rgb(46, 46, 46);
+    --black: #24253c; //rgb(46, 46, 46);
+    --comment: rgbgrey (121, 121, 121);
+    --white: rgb(214, 214, 214);
+    --yellow: rgb(229, 181, 103);
+    --green: rgb(180, 210, 115);
+    --orange: rgb(232, 125, 62);
+    --purple: rgb(158, 134, 200);
+    --pink: rgb(176, 82, 121);
+    --blue: rgb(108, 153, 187);
+
+
+    --primary: #4ebcb5;
+}
+
+
+html,
+body {
+    font-family: 'Fira Code', monospace;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+}
+
+
+.bg-header {
+    background-color: var(--primary);
+    font-size: 14px;
+
+    i {
+        font-size: 12px;
+    }
+
+    .nav {
+        color: var(--black);
+        margin: 20px 0;
+        padding: 0 40px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            padding-bottom: 9px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--black);
+        }
+
+    }
+}
+
+.info {
+    
+}

@@ -1,0 +1,43 @@
+{
+    "name": "vitorhugodotpt/easylog",
+    "description": "A easy way to generate and analise logs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitor Hugo",
+            "email": "vhugovitorhugo.pt",
+            "homepage": "vitorhugo.pt"
+        }
+    ],
+    "homepage": "https://github.com/vitorhugodotpt/easylog",
+    "keywords": ["Laravel", "EasyLog"],
+    "require": {
+        "illuminate/support": "~5|~6|~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VitorHugoDotPt\\EasyLog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VitorHugoDotPt\\EasyLog\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VitorHugoDotPt\\EasyLog\\EasyLogServiceProvider"
+            ],
+            "aliases": {
+                "EasyLog": "VitorHugoDotPt\\EasyLog\\Facades\\EasyLog"
+            }
+        }
+    }
+}
