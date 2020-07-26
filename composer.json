@@ -1,15 +1,15 @@
 {
-    "name": "vitorhugodotpt/easylog",
+    "name": "vitorhugodotpt/easy-log",
     "description": "A easy way to generate and analise logs",
     "license": "MIT",
     "authors": [
         {
             "name": "Vitor Hugo",
-            "email": "vhugovitorhugo.pt",
-            "homepage": "vitorhugo.pt"
+            "email": "vhugo@vitorhugo.pt",
+            "homepage": "http://vitorhugo.pt"
         }
     ],
-    "homepage": "https://github.com/vitorhugodotpt/easylog",
+    "homepage": "https://github.com/vitorhugodotpt/easy-log",
     "keywords": ["Laravel", "EasyLog"],
     "require": {
         "illuminate/support": "~5|~6|~7"
