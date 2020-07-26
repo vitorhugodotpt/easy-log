@@ -20,9 +20,8 @@ class EasyLogServiceProvider extends ServiceProvider
             //->namespace('VitorHugoDotPt\EasyLog\\Controllers')
             ->middleware(['web'])
             ->group(function () {
-                $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+                $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
             });
-
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
