@@ -1,14 +1,14 @@
 <template>
     <div class="bg-header p-0 m-0 text-black flex justify-center items-center">
-        <div class="nav active">
+         <router-link to="/logs" class="nav active">
             <i class="fas fa-terminal"></i> Logs
-        </div>
-        <div class="nav ">
+         </router-link>
+         <router-link to="/alerts" class="nav">
             <i class="far fa-bell"></i> Alerts
-        </div>
-        <div class="nav ">
+         </router-link>
+         <router-link to="/settings" class="nav">
             <i class="fas fa-bars"></i> Settings
-        </div>
+         </router-link>
     </div>
 </template>
 <script>

@@ -15,7 +15,7 @@
 <body>
     <div id="app">
         <header-log></header-log>
-        <info-log></info-log>
+        <router-view></router-view>
     </div>
 
     <script src="{{ asset('vendor/vitorhugodotpt/easy-log/assets/js/app.js') }}"></script>

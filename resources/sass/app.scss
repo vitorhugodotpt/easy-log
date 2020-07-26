@@ -41,22 +41,25 @@ body {
         font-size: 12px;
     }
 
-    .nav {
-        color: var(--black);
+    a.nav {
+        color: var(--white);
         margin: 20px 0;
         padding: 0 40px;
         cursor: pointer;
+        opacity: 0.8;
+        text-decoration: none;
 
         &.active,
         &:hover {
-            padding-bottom: 9px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid var(--black);
+            padding-bottom: 19px;
+            margin-bottom: 0;
+            border-bottom: 1px solid var(--white);
+            opacity: 1;
         }
 
     }
 }
 
 .info {
-    
+
 }

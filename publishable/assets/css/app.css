@@ -6127,18 +6127,21 @@ body {
   font-size: 12px;
 }
 
-.bg-header .nav {
-  color: var(--black);
+.bg-header a.nav {
+  color: var(--white);
   margin: 20px 0;
   padding: 0 40px;
   cursor: pointer;
+  opacity: .8;
+  text-decoration: none;
 }
 
-.bg-header .nav.active,
-.bg-header .nav:hover {
-  padding-bottom: 9px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--black);
+.bg-header a.nav.active,
+.bg-header a.nav:hover {
+  padding-bottom: 19px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--white);
+  opacity: 1;
 }
 
 @media (min-width: 576px) {
