@@ -1,6 +1,6 @@
 <template>
-    <div class="text-white">
-        Alerts
+    <div class="text-white flex mt-10">
+        <h1 class="m-auto">Key undefined</h1>
     </div>
 </template>
 <script>

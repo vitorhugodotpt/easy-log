@@ -12763,14 +12763,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "header-log",
     data: function data() {
-        return {};
+        return {
+            currentPage: 'logs'
+        };
     },
     mounted: function mounted() {
-        console.log('header');
+        this.currentPage = this.$route.path;
     },
 
-    methods: {},
-    computed: {}
+    methods: {
+        active: function active(page) {
+            return page === this.currentPage ? 'active' : '';
+        }
+    },
+    computed: {},
+    watch: {
+        $route: function $route(to, from) {
+            this.currentPage = to.path;
+        }
+    }
 });
 
 /***/ }),
@@ -12788,20 +12799,35 @@ var render = function() {
         "bg-header p-0 m-0 text-black flex justify-center items-center"
     },
     [
-      _c("router-link", { staticClass: "nav active", attrs: { to: "/logs" } }, [
-        _c("i", { staticClass: "fas fa-terminal" }),
-        _vm._v(" Logs\n     ")
-      ]),
+      _c(
+        "router-link",
+        {
+          staticClass: "nav",
+          class: _vm.active("/logs"),
+          attrs: { to: "/logs" }
+        },
+        [_c("i", { staticClass: "fas fa-terminal" }), _vm._v(" Logs\n     ")]
+      ),
       _vm._v(" "),
-      _c("router-link", { staticClass: "nav", attrs: { to: "/alerts" } }, [
-        _c("i", { staticClass: "far fa-bell" }),
-        _vm._v(" Alerts\n     ")
-      ]),
+      _c(
+        "router-link",
+        {
+          staticClass: "nav",
+          class: _vm.active("/alerts"),
+          attrs: { to: "/alerts" }
+        },
+        [_c("i", { staticClass: "far fa-bell" }), _vm._v(" Alerts\n     ")]
+      ),
       _vm._v(" "),
-      _c("router-link", { staticClass: "nav", attrs: { to: "/settings" } }, [
-        _c("i", { staticClass: "fas fa-bars" }),
-        _vm._v(" Settings\n     ")
-      ])
+      _c(
+        "router-link",
+        {
+          staticClass: "nav",
+          class: _vm.active("/settings"),
+          attrs: { to: "/settings" }
+        },
+        [_c("i", { staticClass: "fas fa-bars" }), _vm._v(" Settings\n     ")]
+      )
     ],
     1
   )
@@ -15999,6 +16025,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "logs",
@@ -16021,9 +16053,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text-white" }, [_vm._v("\n    Logs\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex mb-4 text-white" }, [
+      _c("div", { staticClass: "w-1/4" }, [
+        _c("p", [_vm._v("Level")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Event")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-3/4" }, [_vm._v("\n        LOGS\n    ")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -16111,9 +16158,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text-white" }, [_vm._v("\n    Alerts\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-white flex mt-10" }, [
+      _c("h1", { staticClass: "m-auto" }, [_vm._v("Key undefined")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
